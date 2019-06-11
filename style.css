@@ -1,0 +1,145 @@
+:root {
+	--primary-color: #e88522;
+	--secondary-color: #fff6e5;
+	--tertiary-color: #998152;
+
+	--dark-primary-color: #8e5215;
+	--dark-secondary-color: #2b2925;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	background-color: var(--secondary-color);
+	transition: background-color 0.6s ease-in, color 1.2s linear;
+}
+
+a {
+	text-decoration: none;
+	color: var(--primary-color);
+}
+
+a:hover {
+	color: var(--tertiary-color);
+}
+
+h1 {
+	font-size: 3rem;
+	margin-top: -3rem;
+}
+
+h2 {
+	margin-bottom: .5rem;
+}
+
+h3 {
+	font-size: .75rem;
+}
+
+.nav, .footer {
+	width: 100vw;
+	background-color: var(--primary-color);
+	height: 3rem;
+	transition: background-color 1s;
+
+}
+
+.nav-content {
+	max-width: 1368px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-content ul {
+	padding: 0 1rem;
+}
+
+.nav-content li {
+	display: inline;
+}
+
+.nav-content a {
+	padding: .5rem 1rem;
+	background-color: var(--secondary-color);
+	letter-spacing: .075rem;
+	transition: background-color 1s;
+}
+
+.nav-content a:hover {
+	opacity: .6;
+}
+
+.main-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: calc(100vh - 6rem);
+	max-width: 37rem;
+	margin: auto;
+	padding: 0 1rem;
+	letter-spacing: .05rem;
+}
+
+.main-content p {
+	line-height: 1.5rem;
+}
+
+.content h1 , h2, h3 {
+	text-align: center;
+}
+
+.theme-toggle {
+	background-color: #b4bdb6;
+	width: 6rem;
+	height: 2.5rem;
+	margin: auto;
+	border-radius: 2.5rem;
+	padding: .25rem;
+	cursor: pointer;
+}
+
+.toggle-button {
+	width: 2.5rem;
+	height: 2.5rem;
+	background-color: #848d86;
+	border-radius: 100%;
+	position: absolute;
+	transition: .6s;
+}
+
+.theme-toggle input {
+	width: 100%;
+	height: 2.5rem;
+	z-index: 2;
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	font-size: .9rem;
+}
+
+/* Dark Theme */
+
+.dark-theme {
+	background-color: var(--dark-secondary-color);
+	color: #eee;
+}
+
+.dark-theme .nav, 
+.dark-theme .footer, 
+.dark-theme .theme-toggle {
+	background-color: var(--dark-primary-color);
+}
+
+.dark-theme .toggle-button {
+	background-color: var(--primary-color);
+	transform: translateX(3.5rem);
+}
+
+.dark-theme .nav-content a {
+	background-color: var(--dark-secondary-color);
+}
